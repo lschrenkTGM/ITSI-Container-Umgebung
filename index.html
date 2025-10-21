@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Diplomprojekt</title>
+	<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+	<header class="hero">
+		<div class="overlay">
+			<h1 class="project-name">Unser Diplomprojekt</h1>
+		</div>
+	</header>
+
+	<nav class="onpager">
+		<a href="#page1" class="onpager-item">Seite 1</a>
+		<a href="#page2" class="onpager-item">Seite 2</a>
+		<a href="#page3" class="onpager-item">Seite 3</a>
+		<a href="#page4" class="onpager-item">Seite 4</a>
+	</nav>
+
+	<main>
+		<section id="page1" class="page"> <!-- ...existing code... -->
+			<h2>Seite 1</h2>
+			<p>Inhalt Seite 1</p>
+		</section>
+
+		<section id="page2" class="page"> <!-- ...existing code... -->
+			<h2>Seite 2</h2>
+			<p>Inhalt Seite 2</p>
+		</section>
+
+		<section id="page3" class="page"> <!-- ...existing code... -->
+			<h2>Seite 3</h2>
+			<p>Inhalt Seite 3</p>
+		</section>
+
+		<section id="page4" class="page"> <!-- ...existing code... -->
+			<h2>Seite 4</h2>
+			<p>Inhalt Seite 4</p>
+		</section>
+	</main>
+
+	<script>
+		// Einfaches Highlight der aktiven Onpager-Links beim Scrollen
+		const items = document.querySelectorAll('.onpager-item');
+		const sections = document.querySelectorAll('.page');
+		function onScroll() {
+			let index = sections.length - 1;
+			for (let i = 0; i < sections.length; i++) {
+				if (window.scrollY + window.innerHeight/2 < sections[i].offsetTop) { index = i - 1; break; }
+			}
+			items.forEach(it => it.classList.remove('active'));
+			if (index >= 0) items[index].classList.add('active');
+		}
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll();
+	</script>
+</body>
+</html>

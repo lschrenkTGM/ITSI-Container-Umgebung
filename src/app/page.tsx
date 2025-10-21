@@ -1,103 +1,101 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { SITE_CONFIG, getFormattedLastUpdated } from "@/config/siteConfig";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main
+      className="min-h-screen flex flex-col"
+      style={{
+        backgroundImage: "url('/images/index-background.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Header - sehr dunkles Violett, dünner */}
+      <div className="bg-[#160022]/95 backdrop-blur-xl border-b border-[#3f0070]/60">
+        <div className="container mx-auto px-6 py-3 text-center">
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-1 text-white drop-shadow-sm">
+            {SITE_CONFIG.projectTitle}
+          </h1>
+          <p className="text-purple-200 font-medium mb-1">{SITE_CONFIG.schoolName}</p>
+          <p className="text-xs text-gray-300">Letzte Aktualisierung: {getFormattedLastUpdated()}</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-6 py-10 flex flex-col flex-1">
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="bg-black/55 backdrop-blur-md rounded-2xl p-6 mb-6 border border-purple-800/40">
+            <h2 className="text-3xl text-white font-bold mb-3">Willkommen</h2>
+          </div>
+        </div>
+
+        {/* Buttons am unteren Ende der Content-Box */}
+        <div className="mt-auto grid md:grid-cols-2 gap-6 pb-6">
+          <Link
+            href="/aufgabenstellung"
+            className="group block p-4 rounded-lg bg-purple-900/95 border border-purple-700 shadow-lg hover:scale-105 transform transition"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-semibold text-white">Aufgabenstellung</h3>
+                <p className="text-purple-100 text-sm mt-1">Ausgangslage, Projektziel und technische Umsetzung.</p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-purple-200 group-hover:translate-x-1 transition" />
+            </div>
+          </Link>
+
+          <Link
+            href="/team"
+            className="group block p-4 rounded-lg bg-[#1a0030]/95 border border-purple-800 shadow-lg hover:scale-105 transform transition"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-semibold text-white">Team</h3>
+                <p className="text-purple-200 text-sm mt-1">Teamvorstellung und Kontaktdaten.</p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-purple-200 group-hover:translate-x-1 transition" />
+            </div>
+          </Link>
+
+          <Link
+            href="/vertretung"
+            className="group block p-4 rounded-lg bg-blue-900/95 border border-blue-700 shadow-lg hover:scale-105 transform transition"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-semibold text-white">Vertretung nach außen</h3>
+                <p className="text-blue-100 text-sm mt-1">Präsentationen, Workshops und Kontaktmöglichkeiten.</p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-blue-200 group-hover:translate-x-1 transition" />
+            </div>
+          </Link>
+
+          <Link
+            href="/meilensteine"
+            className="group block p-4 rounded-lg bg-green-900/95 border border-green-700 shadow-lg hover:scale-105 transform transition"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-semibold text-white">Meilensteine</h3>
+                <p className="text-green-100 text-sm mt-1">Aktueller Status und Zusammenfassung der Meilensteine.</p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-green-200 group-hover:translate-x-1 transition" />
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-black/60 backdrop-blur-lg border-t border-purple-900/40">
+        <div className="container mx-auto px-6 py-6 text-center">
+          <p className="text-gray-400">
+            © {SITE_CONFIG.academicYear} {SITE_CONFIG.teamName} | Letzte Aktualisierung: {getFormattedLastUpdated()}
+          </p>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
