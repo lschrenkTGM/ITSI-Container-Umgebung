@@ -27,8 +27,8 @@ export default function Home() {
       {/* Content */}
       <div className="container mx-auto px-6 py-10 flex flex-col flex-1">
         <div className="mx-auto w-full max-w-3xl">
-          <div className="bg-black/55 backdrop-blur-md rounded-2xl p-6 mb-6 border border-purple-800/40">
-            <h2 className="text-3xl text-white font-bold mb-3">Willkommen</h2>
+          <div className="bg-black/55 backdrop-blur-md rounded-2xl p-6 mb-6 border border-purple-800/40 text-center" >
+            <h2 className="text-3xl text-white font-bold mb-0">Willkommen</h2>
           </div>
         </div>
 
