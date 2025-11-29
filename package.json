@@ -1,5 +1,6 @@
 {
   "name": "my-project",
+  "homepage": "https://lschrenkTGM.github.io/ITSI-Container-Umgebung/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "dev:turbo": "next dev --turbopack",
-    "build:turbo": "next build --turbopack"
+    "build:turbo": "next build --turbopack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "lucide-react": "^0.544.0",
@@ -24,6 +27,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

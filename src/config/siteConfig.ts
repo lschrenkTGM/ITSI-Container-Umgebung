@@ -3,7 +3,7 @@
 
 export const SITE_CONFIG = {
   // Letztes Update-Datum der Website
-  lastUpdated: "20.10.2025",
+  lastUpdated: "29.11.2025",
   
   // Weitere Konfigurationsmöglichkeiten für die Zukunft
   projectTitle: "ITSI Container Diplomprojekt 2025/26",

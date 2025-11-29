@@ -14,9 +14,9 @@ const teamMembers = [
 		tasks: "Kümmert sich um die Verbindung zwischen der Benutzeroberfläche und der technischen Übungsumgebung.",
 	},
 	{
-		name: "Carol Gradkowski",
+		name: "Karol Gradkowski",
 		role: "Backend Developer & Container Verwaltung",
-		email: "cgradkowski@student.tgm.ac.at",
+		email: "kgradkowski@student.tgm.ac.at",
 		linkedin: "https://www.linkedin.com/in/karol-gradkowski-09372536a/",
 		github: "https://github.com/Rechtschraibung",
 		image: "/images/carol.jpg",

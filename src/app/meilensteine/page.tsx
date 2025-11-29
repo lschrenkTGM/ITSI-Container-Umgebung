@@ -25,7 +25,7 @@ const milestones = [
 		description:
 			"Implementierung der Formulare für die Datenerfassung und -übertragung im System",
 		deadline: "27.10.2025",
-		status: "pending",
+		status: "completed",
 	},
 	{
 		id: 4,
@@ -33,7 +33,7 @@ const milestones = [
 		description:
 			"Entwicklung eines funktionsfähigen Prototyps der Webanwendung",
 		deadline: "05.11.2025",
-		status: "pending",
+		status: "completed",
 	},
 	{
 		id: 5,
@@ -41,7 +41,7 @@ const milestones = [
 		description:
 			"Erstellung und Konfiguration der Standard-Container-Templates für verschiedene Anwendungsfälle",
 		deadline: "05.11.2025",
-		status: "pending",
+		status: "completed",
 	},
 	{
 		id: 6,
@@ -49,7 +49,7 @@ const milestones = [
 		description:
 			"Etablierung der Kommunikation zwischen Server und Container-Infrastruktur",
 		deadline: "15.11.2025",
-		status: "pending",
+		status: "completed",
 	},
 	{
 		id: 7,
@@ -57,7 +57,7 @@ const milestones = [
 		description:
 			"Implementierung der Backend-Logik für Container-Management und -Steuerung",
 		deadline: "30.11.2025",
-		status: "pending",
+		status: "completed",
 	},
 	{
 		id: 8,
