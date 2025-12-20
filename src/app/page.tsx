@@ -85,6 +85,19 @@ export default function Home() {
               <ArrowRight className="w-5 h-5 text-green-200 group-hover:translate-x-1 transition" />
             </div>
           </Link>
+
+          <Link
+            href="/architektur"
+            className="group block p-4 rounded-lg bg-amber-900/95 border border-amber-700 shadow-lg hover:scale-105 transform transition"
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-semibold text-white">Architektur & Technologien</h3>
+                <p className="text-amber-100 text-sm mt-1">Backend, Schnittstellen, Remote-Zugriff und Sicherheit.</p>
+              </div>
+              <ArrowRight className="w-5 h-5 text-amber-200 group-hover:translate-x-1 transition" />
+            </div>
+          </Link>
         </div>
       </div>
 
