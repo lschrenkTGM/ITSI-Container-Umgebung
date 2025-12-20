@@ -75,7 +75,7 @@ export default function ArchitekturPage() {
 
         {/* Fazit */}
         <section className="bg-black/40 rounded-xl p-6 border border-purple-900/20 text-gray-200">
-          <h3 className="text-xl font-bold text-white mb-2">Kurzfazit</h3>
+          <h3 className="text-xl font-bold text-white mb-2">Kurzfazit!</h3>
           <p className="leading-relaxed">
             Die gewählte Architektur verbindet Performance und Kontrolle (Go + Docker SDK) mit Benutzerfreundlichkeit
             (noVNC) und Flexibilität bei der Zugriffskontrolle (ABAC). REST und WebSockets bieten eine
