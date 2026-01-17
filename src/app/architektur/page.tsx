@@ -73,6 +73,39 @@ export default function ArchitekturPage() {
           </p>
         </section>
 
+        {/* CI/CD & Testing */}
+        <section className="bg-gradient-to-r from-indigo-900/20 to-indigo-800/20 rounded-xl p-6 border border-indigo-700/30">
+          <h2 className="text-2xl font-bold text-indigo-300 mb-3">Testing & CI/CD Pipeline</h2>
+          <p className="text-gray-200 text-lg leading-relaxed">
+            Die Qualitätssicherung erfolgt über automatisierte Tests in einer <span className="font-medium text-white">CI/CD-Pipeline</span>
+            mittels <span className="font-medium text-white">GitHub Workflows</span>. Bei jedem Commit werden automatisch
+            Tests ausgeführt, Code-Qualität überprüft und das Deployment vorbereitet. Dies gewährleistet eine
+            kontinuierliche Integration und schnelle Fehlererkennung.
+          </p>
+        </section>
+
+        {/* Datenbank */}
+        <section className="bg-gradient-to-r from-cyan-900/20 to-cyan-800/20 rounded-xl p-6 border border-cyan-700/30">
+          <h2 className="text-2xl font-bold text-cyan-300 mb-3">Datenbank & Persistenz</h2>
+          <p className="text-gray-200 text-lg leading-relaxed">
+            Als Datenbanksystem kommt <span className="font-medium text-white">PostgreSQL</span> zum Einsatz.
+            Die Datenbankinstanz läuft in einem separaten Container und wird über <span className="font-medium text-white">Docker Compose</span>
+            orchestriert. Zusätzlich wird ein Volume für die Speicherung von <span className="font-medium text-white">Docker Compose Files</span>
+            bereitgestellt, sodass Konfigurationen persistent gespeichert und bei Bedarf wiederhergestellt werden können.
+          </p>
+        </section>
+
+        {/* Live Environment */}
+        <section className="bg-gradient-to-r from-pink-900/20 to-pink-800/20 rounded-xl p-6 border border-pink-700/30">
+          <h2 className="text-2xl font-bold text-pink-300 mb-3">Live Container-Umgebung</h2>
+          <p className="text-gray-200 text-lg leading-relaxed">
+            Über ein <span className="font-medium text-white">Web-Interface</span> können Benutzer ihre Container-Umgebungen
+            in Echtzeit steuern und überwachen. Das User Interface bietet Funktionen zum Starten, Stoppen und
+            Überwachen von Containern sowie zur Anzeige von Logs und Ressourcenverbrauch. Die Container laufen
+            in einer isolierten Live-Umgebung, die über den Browser zugänglich ist.
+          </p>
+        </section>
+
         {/* Fazit */}
         <section className="bg-black/40 rounded-xl p-6 border border-purple-900/20 text-gray-200">
           <h3 className="text-xl font-bold text-white mb-2">Kurzfazit!</h3>

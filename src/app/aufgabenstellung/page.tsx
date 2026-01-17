@@ -46,12 +46,27 @@ export default function AufgabenstellungPage() {
         {/* Technische Umsetzung */}
         <section className="bg-gradient-to-r from-orange-900/20 to-orange-800/20 rounded-xl p-6 border border-orange-700/30">
           <h2 className="text-2xl font-bold text-orange-300 mb-4">Technische Umsetzung</h2>
-          <p className="text-gray-200 text-lg leading-relaxed">
+          <p className="text-gray-200 text-lg leading-relaxed mb-4">
             Neben der Webseite wird ein <span className="text-orange-300 font-medium">Backend entwickelt</span>, 
             das die Verwaltung und Steuerung der Container übernimmt. Eine 
             <span className="text-orange-300 font-medium"> Schnittstelle</span> verbindet das Frontend 
             mit dem Backend und sorgt für eine reibungslose Kommunikation.
           </p>
+          <h3 className="text-xl font-semibold text-orange-200 mb-3 mt-6">Kernkomponenten der Implementierung:</h3>
+          <ul className="list-disc list-inside text-gray-200 space-y-2">
+            <li>
+              <span className="font-medium text-white">CI/CD Pipeline:</span> Automatisiertes Testing und Deployment
+              über GitHub Workflows zur Sicherstellung der Code-Qualität
+            </li>
+            <li>
+              <span className="font-medium text-white">PostgreSQL Datenbank:</span> Persistente Datenspeicherung mit
+              Docker Compose für Container-Konfigurationen und Benutzerdaten
+            </li>
+            <li>
+              <span className="font-medium text-white">Live Container-Umgebung:</span> Webbasiertes User Interface
+              zur Verwaltung und Überwachung von Container-Instanzen in Echtzeit
+            </li>
+          </ul>
         </section>
       </div>
     </main>
